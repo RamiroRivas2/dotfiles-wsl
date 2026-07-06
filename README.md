@@ -64,3 +64,13 @@ lists and program settings in `home.nix` need a rebuild.
 
 Fonts are intentionally absent: WSL text renders in WezTerm on the Windows
 side, so Hack Nerd Font is installed by the Windows repo.
+
+## Workflow tools (from the video description)
+
+Installed imperatively (not yet nixified - gh-axi/gnhf are not in nixpkgs):
+
+- **gh-axi + gnhf**: `sudo npm install -g gh-axi gnhf` (node is the apt/NodeSource one, prefix /usr)
+- **no-mistakes**: `curl -fsSL https://raw.githubusercontent.com/kunchenguid/no-mistakes/main/docs/install.sh | sh`
+- **treehouse**: `curl -fsSL https://kunchenguid.github.io/treehouse/install.sh | sh`
+- **firstmate**: cloned at `~/github/firstmate` - start a tmux session, `cd ~/github/firstmate && claude`
+- **lavish**: Claude Code skill via `npx -y skills add kunchenguid/lavish-axi --skill lavish -a claude-code -g -y`

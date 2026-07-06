@@ -11,7 +11,10 @@
 
   outputs = { nixpkgs, home-manager, ... }: {
     homeConfigurations."ramiro" = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";
+        config.allowUnfree = true;  # claude-code has a proprietary license
+      };
       modules = [ ./home.nix ];
     };
   };

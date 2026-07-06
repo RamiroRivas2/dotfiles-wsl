@@ -18,6 +18,7 @@ in
     jq        # json on the command line
     lazygit
     neovim
+    claude-code  # the agent CLI - his repo installs this as a Homebrew cask
     # no nerd font here: fonts render on the WINDOWS side (WezTerm),
     # so Hack Nerd Font lives in the Windows dotfiles repo
   ];

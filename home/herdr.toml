@@ -1,0 +1,14 @@
+# herdr - kun's agent multiplexer (video ch. 33:22), replaces tmux day-to-day.
+# Config reference: https://herdr.dev/docs/configuration/
+# Defaults are good; we only change two things.
+
+[keys]
+# match the old tmux muscle memory (herdr default is ctrl+b)
+prefix = "ctrl+a"
+
+# the old tmux "Ctrl+a A" trick: open Claude Code in a new pane
+[[keys.command]]
+key = "prefix+shift+a"
+type = "pane"
+command = "claude"
+description = "open Claude Code in a pane"

@@ -23,6 +23,8 @@ in
     # so Hack Nerd Font lives in the Windows dotfiles repo
   ];
   home.sessionVariables.EDITOR = "nvim";
+  # user-installed binaries (the herdr installer targets this dir)
+  home.sessionPath = [ "$HOME/.local/bin" ];
 
   # lets `home-manager switch` work as a plain command after the first run
   programs.home-manager.enable = true;
@@ -67,6 +69,8 @@ in
   # Edit-in-place: the real file stays in the repo, home just points at it.
   home.file.".config/nvim".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/nvim";
+  home.file.".config/herdr/config.toml".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/herdr.toml";
   home.file.".tmux.conf".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/home/tmux.conf";
   home.file.".claude/CLAUDE.md".source =

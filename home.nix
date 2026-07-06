@@ -46,8 +46,8 @@ in
 
   programs.git = {
     enable = true;
-    userName = "Ramiro Rivas";
-    userEmail = "Ramirorivasperez@gmail.com";
+    settings.user.name = "Ramiro Rivas";
+    settings.user.email = "Ramirorivasperez@gmail.com";
   };
 
   programs.starship = {
